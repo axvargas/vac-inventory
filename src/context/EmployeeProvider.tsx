@@ -20,6 +20,7 @@ const EmployeeProvider = ({ children }: EmployeeProviderProps) => {
   const [selectedEmployee, setSelectedEmployee] = useState<Employee | undefined>()
 
   const [loading, setLoading] = useState(false)
+  
   const getAllEmployees = async () => {
     setLoading(true)
     const q = query(collection(db, "employee"), where("role", "==", "employee"));

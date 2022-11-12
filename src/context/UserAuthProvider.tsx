@@ -9,7 +9,7 @@ import {
   onAuthStateChanged
 } from 'firebase/auth'
 import { auth } from '../firebase'
-import {getFirestore, doc, setDoc, getDoc} from 'firebase/firestore'
+import {getFirestore, doc, setDoc, getDoc, query, collection, where, getDocs} from 'firebase/firestore'
 
 import { Response } from '../interfaces/Response';
 
@@ -76,9 +76,20 @@ const UserAuthProvider = ({ children }: UserAuthProviderProps) => {
     }
   }
 
-  const signIn = async (email: string, password: string): Promise<Response> => {
+  const signIn = async (email: string, password: string, from: string): Promise<Response> => {
     setLoading(true)
     try {
+      const docRef = doc(db, "employee", email);
+      const docSnap = await getDoc(docRef);
+      const { role } = docSnap.data() as any;
+      console.log(docSnap.data())
+      console.log(role)
+      if(role != from){
+        return {
+          errorCode: 'auth/wrong-role',
+          errorMessage: 'Wrong role'
+        }
+      }
       await signInWithEmailAndPassword(auth, email, password)
       return{
         errorCode: null,

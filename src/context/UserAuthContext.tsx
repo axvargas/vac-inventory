@@ -4,7 +4,7 @@ export type UserAuthContextProps = {
   user: any;
   loading: boolean;
   registerEmployee: (email: string, password: string, role: string, name: string, lastname: string, id:string) => void;
-  signIn: (email: string, password: string) => Promise<Response>;
+  signIn: (email: string, password: string, from: string) => Promise<Response>;
   signOut: () => void;
 };
 

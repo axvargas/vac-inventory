@@ -26,7 +26,7 @@ interface FormValues {
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
-    minHeight: 900,
+    minHeight: '100vh',
     backgroundSize: 'cover',
     backgroundImage:
       'url(https://images.unsplash.com/photo-1484242857719-4b9144542727?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&q=80)',
@@ -35,7 +35,7 @@ const useStyles = createStyles((theme) => ({
   form: {
     borderRight: `1px solid ${theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[3]
       }`,
-    minHeight: 900,
+    minHeight: '100vh',
     maxWidth: 450,
     paddingTop: 80,
 
@@ -82,7 +82,7 @@ const SignIn = () => {
 
   const handleSubmit = async (values: FormValues) => {
     console.log(values);
-    const response = await signIn(values.email, values.password)
+    const response = await signIn(values.email, values.password, 'employee')
     if(response.errorCode){
       setError(response.errorMessage)
     } else{

@@ -98,7 +98,7 @@ const InformationForm = ({selectedEmployee}: InformationFormProps ) => {
   });
 
   const { updateEmployee } = useEmployee();
-  const handleSubmit = (values: Employee) => {
+  const handleSubmit = async (values: Employee) => {
     const to = user.role == 'admin' ? '/admin-app' : '/app'
     console.log(values);
     const payload: Employee = {
@@ -122,7 +122,7 @@ const InformationForm = ({selectedEmployee}: InformationFormProps ) => {
       payload['doses'] = values.doses;
       payload['vacdate'] = values.vacdate;
     }
-    updateEmployee(payload);
+    await updateEmployee(payload);
     navigate(to)
   };
 

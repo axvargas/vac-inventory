@@ -188,9 +188,9 @@ const Datatable = () => {
     gridRef.current!.api.sizeColumnsToFit()
   }, [rowEmployeeData]);
 
-  const handleDelete = useCallback(() => {
+  const handleDelete = useCallback(async() => {
     const emails = selectedEmployees.map((employee) => employee.email)
-    deleteEmployees(emails)
+    await deleteEmployees(emails)
     setSelectedEmployees([])
     setShowDelete(false)
     setOpened(false)
