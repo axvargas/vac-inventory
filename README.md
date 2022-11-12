@@ -9,7 +9,7 @@
 <img width="164" alt="CleanShot 2022-11-11 at 23 12 48@2x" src="https://user-images.githubusercontent.com/56695700/201456530-3aba673e-bb91-488a-93a7-01f8f5aa6490.png">
 
 - Empecé a crear las diferentes páginas que iban a aparecer en la aplicación en conjunto con los componentes que iban a utilizarse dentro de ellas, con dummy data. Cabe recalcar que hay dos páginas de inicio de sesión por un tema de experiencia de usuario debido a que quería que los usuarios administradores puedan diferenciar cuando quieran ingresar como administrador
-- Utilizando el hook de formularios `useForm` que provee la librería manttine, en conjunto con la librería Yup implenté los formularios con sus respectivas validaciones. 
+- Utilizando el hook de formularios `useForm` que provee la librería Mantine, en conjunto con la librería Yup implenté los formularios con sus respectivas validaciones. Cabe recalcar que yo ustilizaba Material UI pero descubrí esta nueva librería que tiene una mejor apariencia y posee una gran cantidad de componentes.
 - Agregué el componente de tabla que provee la librería AgGrid para mostrar los empleados. La rázon por la que agregué esta dependencia fue con el propósito de mantener un buen rendimiento al mostrar una gran cantidad de empleados ya que posee virtualización. Además, permite varias funciones ya implementadas como el filtrad por columna o permitir descargar la info a csv o xls, para exportar de manera fácil la información como un futuro feature de la app.
 - Procedí a crear un layout que se encuentra dentro de la carpeta layout
 - Procedí a realizar el routing de la aplicción utilizando react-router-dom v6
