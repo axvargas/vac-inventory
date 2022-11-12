@@ -6,7 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  here: '<YOUR CONFIG>',
+  apiKey: "AIzaSyDHUPCUzc3g2QfZRIli38EBKWYpvvH_XnA",
+  authDomain: "vac-inventory.firebaseapp.com",
+  projectId: "vac-inventory",
+  storageBucket: "vac-inventory.appspot.com",
+  messagingSenderId: "754248513046",
+  appId: "1:754248513046:web:040457326aede6f0dfa737"
 };
 
 // Initialize Firebase
