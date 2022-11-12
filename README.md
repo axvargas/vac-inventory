@@ -52,6 +52,7 @@ npm run dev
 ```
 
 Luego ir al navegador o dar click en el link dado en la consola
+
 <img width="259" alt="CleanShot 2022-11-11 at 23 43 12@2x" src="https://user-images.githubusercontent.com/56695700/201457444-7e10c65e-9e00-46b8-aa73-52004b31d6fe.png">
 
 
@@ -67,6 +68,7 @@ Pero para poder probar la aplicación he dejado algunos usuarios creados, a cont
 | `jhon@example.com` | `temp123` | employee |
 
 Para poder ingresar como admin la url sería: http://127.0.0.1:5173/admin
+
 Para poder ingresar como admin la url sería : http://127.0.0.1:5173/
 
 ## Tecnologías usadas
