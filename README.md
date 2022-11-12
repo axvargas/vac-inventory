@@ -39,6 +39,7 @@
  
 Actualmente se tiene una limitación ya que solo se crea un usuario en la colección de employee más no en Firebase Authentication esto debido a que la contraseña tiene que ser randómica y si utilizo dentro de la aplicación la función de firebase para registrar un usuario, se inicia sesión automáticamente con ese usuario, por ende la solución sería
 - Crear un trigger en firebase que ejecute el registro de un usuario cada vez que se crea un documento dentro de la colección de employees. Esto tambn puede ser hecho desde AWS con una función lambda. Aunque esta tarea puede ser realizado por el equipo de backend
+- Crear un trigger similar al anterior pero que sea ejecutado cuando un usuario sea eliminado para que no tenga acceso a la aplicación los usuarios eliminados
 
 
 ## Installation
@@ -67,9 +68,14 @@ Pero para poder probar la aplicación he dejado algunos usuarios creados, a cont
 | `chiripa@example.com` | `temp123` | employee |
 | `jhon@example.com` | `temp123` | employee |
 
+Por favor no borrar los empleados mostrados en la tabla anterior, sin antes probar lo que puede hacer el usuario empleado dentro de la app
+
 Para poder ingresar como admin la url sería: http://127.0.0.1:5173/admin
 
 Para poder ingresar como admin la url sería : http://127.0.0.1:5173/
+
+
+
 
 ## Tecnologías usadas
 
