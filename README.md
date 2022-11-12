@@ -6,6 +6,8 @@
 - Luego decidí escoger las herramientas que podrían permitirme obtener un resultado funcional de manera eficiente
 - Usando vite se puede crear un proyecto de React de manera rápida con el comando vite `npm create vite@latest`
 - Procedí a crear las diferentes directorios que iba a utilizar
+<img width="164" alt="CleanShot 2022-11-11 at 23 12 48@2x" src="https://user-images.githubusercontent.com/56695700/201456530-3aba673e-bb91-488a-93a7-01f8f5aa6490.png">
+
 - Empecé a crear las diferentes páginas que iban a aparecer en la aplicación en conjunto con los componentes que iban a utilizarse dentro de ellas, con dummy data. Cabe recalcar que hay dos páginas de inicio de sesión por un tema de experiencia de usuario debido a que quería que los usuarios administradores puedan diferenciar cuando quieran ingresar como administrador
 - Utilizando el hook de formularios `useForm` que provee la librería manttine, en conjunto con la librería Yup implenté los formularios con sus respectivas validaciones. 
 - Agregué el componente de tabla que provee la librería AgGrid para mostrar los empleados. La rázon por la que agregué esta dependencia fue con el propósito de mantener un buen rendimiento al mostrar una gran cantidad de empleados ya que posee virtualización. Además, permite varias funciones ya implementadas como el filtrad por columna o permitir descargar la info a csv o xls, para exportar de manera fácil la información como un futuro feature de la app.
@@ -13,8 +15,12 @@
 - Procedí a realizar el routing de la aplicción utilizando react-router-dom v6
 - Luego cree la aplicación en Firebase para poder utilizar sus servicios
 - Cree un usuario administrador y al estar utilizando roles tuve que enlazarlo con una colección en firestore
-- Cree una colección de employees en firestore para enlazar los usuarios con un respectivo documento con toda la información extra del usuario
+- Cree una colección de employees en firestore para enlazar los usuarios con un respectivo documento con toda la información extra del usuario (Esta info por lo general no se sube a github, pero por motivos de que se pueda probar fácilmente la aplicación decidí subirlo)
 - Procedí crear un usuario de administrador y unos usuarios de empleador para poder consumir sus datos dentro de la app
+<img width="1283" alt="CleanShot 2022-11-11 at 23 16 18@2x" src="https://user-images.githubusercontent.com/56695700/201456624-3ef1a968-6839-4685-8d27-5b08fc424222.png">
+
+<img width="963" alt="CleanShot 2022-11-11 at 23 16 58@2x" src="https://user-images.githubusercontent.com/56695700/201456647-ea7f3599-f8e9-4917-837a-cdee4120057a.png">
+
 - Primero enlacé la aplicación web con firebase usando la cofiguración brindada desde firebase la cual se puede encontrar en el archivo firebase
 - Procedí a crear el esquema de rutas protegidas basada en roles, utilizando react router dom en conjunto con la autenticación de firebase
 - Utilizando contextAPI cree un contexto referente al usuario que ha iniciado sesión, y en el se agregaron todas las funciones referentes a authenticación y usuarios.
@@ -46,6 +52,7 @@ npm run dev
 ```
 
 Luego ir al navegador o dar click en el link dado en la consola
+<img width="259" alt="CleanShot 2022-11-11 at 23 43 12@2x" src="https://user-images.githubusercontent.com/56695700/201457444-7e10c65e-9e00-46b8-aa73-52004b31d6fe.png">
 
 
 La aplicación es funcional en un 90% ya que los nuevos usuarios no pueden ingresar a la plataforma debido a que actualmente hace falta la función remota que ejecute el registro cuando se agregué un nuevo empleado a la coleccion de firestore
@@ -54,11 +61,13 @@ Pero para poder probar la aplicación he dejado algunos usuarios creados, a cont
 | usuario | contraseña | rol |
 | ------ | ------ | ------ |
 | `andresxavier99@gmail.com` | `c0ntr453ña` | admin |
-| `jhon@example.com` | `temp123` | employee |
-| `jhon@example.com` | `temp123` | employee |
-| `jhon@example.com` | `temp123` | employee |
+| `pame@example.com` | `admin123` | admin |
+| `gaby@example.com` | `temp123` | employee |
+| `chiripa@example.com` | `temp123` | employee |
 | `jhon@example.com` | `temp123` | employee |
 
+Para poder ingresar como admin la url sería: http://127.0.0.1:5173/admin
+Para poder ingresar como admin la url sería : http://127.0.0.1:5173/
 
 ## Tecnologías usadas
 
@@ -86,9 +95,16 @@ Pero para poder probar la aplicación he dejado algunos usuarios creados, a cont
 - Seleccionar os usuario para borrar por lotes o de manera individual
 - Ingresar a la información de los usuarios a través de un doble click en la fila de la tabla
 - Editar la información de los usuarios
+<img width="1178" alt="CleanShot 2022-11-11 at 23 41 32@2x" src="https://user-images.githubusercontent.com/56695700/201457412-02328b1c-a1f2-4e00-a4a6-6a95de1f24fc.png">
+<img width="1178" alt="CleanShot 2022-11-11 at 23 41 32@2x" src="https://user-images.githubusercontent.com/56695700/201457416-bd9bf333-2cf0-47c5-a3a7-73cf6dfd0ced.png">
+<img width="1171" alt="CleanShot 2022-11-11 at 23 42 26@2x" src="https://user-images.githubusercontent.com/56695700/201457430-4f784686-247e-4005-baa1-99df96fe419f.png">
+<img width="479" alt="CleanShot 2022-11-11 at 23 42 51@2x" src="https://user-images.githubusercontent.com/56695700/201457438-97d84534-0ba3-45c4-9060-13871cc8140c.png">
+
 
 #### Empleados
 - Pueden ingresar a su información dentro del menú ubicado en la esquina superior derecha de la pantalla para poder actualizarla
+<img width="323" alt="CleanShot 2022-11-11 at 23 20 33@2x" src="https://user-images.githubusercontent.com/56695700/201456781-6d63fa3c-6dc5-41bb-b63c-82e8b2d4f8b8.png">
+<img width="1180" alt="CleanShot 2022-11-11 at 23 21 16@2x" src="https://user-images.githubusercontent.com/56695700/201456799-3e206c4e-b6b7-49cf-8ed5-e32e51463b45.png">
 
 
 
