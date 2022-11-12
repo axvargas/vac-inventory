@@ -36,6 +36,7 @@
 - Agregar paginación dentro de la tabla a pesar de que la tabla es bastante eficiente en temas de renderizado. Si se requiere mejorar el performance de la consulta realizada a firebase, se puede utilizar paginación para ir obteniendo los empleados a mostrar por lotes.
 - Agregar una lectura en tiempo real de los empleados para que se puedan ver las actualizaciones en tiempo real hechas por otros administradores sin necesidad de recargar la página.
 - Poder crear usuarios con rol como input en el formulario, para poder crear usuarios administradores desde la aplicación
+- En caso de querer filtrar de manera diferente, se puede crear la lógica propia, y amoldarla a Agdrid o en su defecto, cambiar la forma de mostrar los datos, dependiendo del concenso al que se llegue con el lider del equipo
  
 Actualmente se tiene una limitación ya que solo se crea un usuario en la colección de employee más no en Firebase Authentication esto debido a que la contraseña tiene que ser randómica y si utilizo dentro de la aplicación la función de firebase para registrar un usuario, se inicia sesión automáticamente con ese usuario, por ende la solución sería
 - Crear un trigger en firebase que ejecute el registro de un usuario cada vez que se crea un documento dentro de la colección de employees. Esto tambn puede ser hecho desde AWS con una función lambda. Aunque esta tarea puede ser realizado por el equipo de backend
