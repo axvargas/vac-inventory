@@ -76,7 +76,6 @@ interface InformationFormProps {
 
 const InformationForm = ({selectedEmployee}: InformationFormProps ) => {
 
-  console.log(selectedEmployee);
   const [checked, setChecked] = useState(false);
   const {user} = useAuth()
   const navigate = useNavigate()
@@ -100,7 +99,6 @@ const InformationForm = ({selectedEmployee}: InformationFormProps ) => {
   const { updateEmployee } = useEmployee();
   const handleSubmit = async (values: Employee) => {
     const to = user.role == 'admin' ? '/admin-app' : '/app'
-    console.log(values);
     const payload: Employee = {
       id: values.id,
       name: values.name,

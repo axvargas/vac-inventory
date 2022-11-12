@@ -184,7 +184,6 @@ const Datatable = () => {
   }, []);
 
   const onFirstDataRendered = useCallback((params: FirstDataRenderedEvent) => {
-    console.log('Hello')
     gridRef.current!.api.sizeColumnsToFit()
   }, [rowEmployeeData]);
 

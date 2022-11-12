@@ -81,7 +81,6 @@ const SignIn = () => {
   const {signIn} = useAuth()
 
   const handleSubmit = async (values: FormValues) => {
-    console.log(values);
     const response = await signIn(values.email, values.password, 'employee')
     if(response.errorCode){
       setError(response.errorMessage)

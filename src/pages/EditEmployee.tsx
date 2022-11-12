@@ -15,8 +15,6 @@ const EditEmployee = () => {
     getEmployeeById(params.id)
   }, [])
 
-  console.log(params, selectedEmployee)
-
   return (
     <>
       <Button leftIcon={<IconArrowLeft />} variant="subtle" color="red" onClick={() => navigate('/admin-app')} sx={{ position: 'fixed' }}>

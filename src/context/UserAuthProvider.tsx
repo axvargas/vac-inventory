@@ -37,12 +37,10 @@ const UserAuthProvider = ({ children }: UserAuthProviderProps) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {     
         getUserFromFirestore(currentUser.email).then((user) => {
-          console.log('USER:', user)
           setUser({...currentUser, ...user})
           setLoading(false);
         })
       } else {
-        console.log('no user')
         setLoading(false);
       }
     })
@@ -82,8 +80,6 @@ const UserAuthProvider = ({ children }: UserAuthProviderProps) => {
       const docRef = doc(db, "employee", email);
       const docSnap = await getDoc(docRef);
       const { role } = docSnap.data() as any;
-      console.log(docSnap.data())
-      console.log(role)
       if(role != from){
         return {
           errorCode: 'auth/wrong-role',

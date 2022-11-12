@@ -44,7 +44,6 @@ const NewEmployeeForm = () => {
   const {registerEmployee} = useAuth()
 
   const handleSubmit = async (values: FormValues) => {
-    console.log(values);
     await registerEmployee(values.email, '123456', 'employee', values.name, values.lastname, values.id)
     navigate('/admin-app')
   };

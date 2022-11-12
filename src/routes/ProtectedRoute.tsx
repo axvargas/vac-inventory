@@ -10,7 +10,6 @@ const ProtectedRoute = ({allowedRole}: ProtectedRouteProps) => {
   const location = useLocation()
   const {user, loading} = useAuth()
 
-  console.log('Protected: ', user, loading, user.role)
   if (loading) {
     return (
       <LoadingOverlay visible={loading} overlayBlur={2} loader={<Loader variant='dots'/>} />  
